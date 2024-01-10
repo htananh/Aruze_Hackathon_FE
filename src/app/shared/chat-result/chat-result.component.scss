@@ -1,6 +1,7 @@
 .chat-container {
-    
-   
+   height: 80vh; 
+   max-height: 80vh;
+   overflow-y: auto;
     border: 2px solid #ccc;
     padding: 20px;
     border-radius: 5px;
@@ -30,9 +31,9 @@
     margin-top: 20px;
   }
   
-  input {
+  .searched-message {
     padding: 8px;
-    width: 92%;
+    width: 90%;
     margin-right: 10px;
     outline: none;
     border: 1px solid #ccc;
@@ -51,3 +52,25 @@
   button:hover {
     background-color: #45a049;
   }
+
+  
+  .quiz-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  form {
+    margin-top: 10px;
+  }
+
+
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
