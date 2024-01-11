@@ -9,7 +9,7 @@ import { loginFailure, loginSuccess, registerFailure, registerSuccess } from "./
 })
 
 export class AuthService{
-    private apiUrl=BASR_URL_API;
+    private apiUrl=BASR_URL_API+'/auth';
     
     constructor(private http: HttpClient, private store:Store){}
 

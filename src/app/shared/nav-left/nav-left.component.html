@@ -26,19 +26,19 @@
 
 
   <div class="login-container mt-5 ">
-    <button style="color: white;" class="login-button w-full white py-2" (click)="HandleLogin()">Login</button>
+    <button  style="color: white;" class="login-button w-full white py-2" (click)="HandleLogin()">Login</button>
   </div>
   
   
             
-  <button *ngIf="false" class="flex  text-lg mt-5" (click)="toggleMenu()">
+  <button *ngIf="UserProfile" class="flex  text-lg mt-5" (click)="toggleMenu()">
     <img class="w-7 h-7" src="https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_640.png" alt="">
     <span class="px-5">Ho Tan Anh </span>
       </button>
       <div class="menu-container">
         <div class="menu" [class.show]="isMenuOpen" >
           <button class="menu-item">Tài Khoản</button>
-          <button class="menu-item">Đăng xuất</button>
+          <button (click)="logout()" class="menu-item">Đăng xuất</button>
         </div>
       </div>
       
