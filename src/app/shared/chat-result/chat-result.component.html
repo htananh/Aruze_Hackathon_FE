@@ -83,8 +83,11 @@
           <input type="radio" name="answer3" value="d"> d. Cascading Style Sheets
         </label>
   
-        <button type="submit">Gửi</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
+  </ng-container>
+  <ng-container *ngIf=" param==''">
+    <p class="flex items-center justify-center h-full text-xl">Login and select the file to use</p>
   </ng-container>
   </div>

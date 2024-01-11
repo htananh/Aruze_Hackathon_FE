@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { CUSTOM_ELEMENTS_SCHEMA,NgModule} from '@angular/core'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +15,10 @@ import { SharedComponent } from './shared/shared.component';
 import { QuizizzComponent } from './quizizz/quizizz.component';
 import { QaComponent } from './qa/qa.component';
 import { RouterModule } from '@angular/router';
+import { DialogModule } from '@angular/cdk/dialog';
+import { AuthModule } from './auth/auth.module';
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,17 +29,23 @@ import { RouterModule } from '@angular/router';
     SumComponent,
     SharedComponent,
     QuizizzComponent,
-    QaComponent
+    QaComponent,
+    
+ 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AuthModule,
     FormsModule,
     MatMenuModule,
     MatButtonModule,
-    RouterModule 
+    RouterModule,
+    MatDialogModule,
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

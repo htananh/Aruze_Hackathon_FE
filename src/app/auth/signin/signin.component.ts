@@ -1,0 +1,28 @@
+import { Component, Input } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-signin',
+  templateUrl: './signin.component.html',
+  styleUrls: ['./signin.component.scss']
+})
+export class SigninComponent {
+  @Input() changeIslogin:any;
+  myform: FormGroup;
+constructor(private router:Router, private fb:FormBuilder) {
+    this.myform = fb.group({
+        email:['',[Validators.required, Validators.email]],
+        password:['',[Validators.required,  Validators.minLength(5)]],
+    })
+  }
+  navigateToHome(){
+    this.router.navigate(['/']);
+  }
+  submitForm(){
+    if(this.myform.valid){
+      console.log(this.myform.value);
+      
+    }
+  }
+}

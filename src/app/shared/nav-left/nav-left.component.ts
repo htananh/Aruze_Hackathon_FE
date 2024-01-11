@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { res } from 'src/Data/res_file';
-
+import {MatDialog} from '@angular/material/dialog'
+import { AuthComponent } from 'src/app/auth/auth.component';
 @Component({
   selector: 'app-nav-left',
   templateUrl: './nav-left.component.html',
@@ -9,6 +10,9 @@ import { res } from 'src/Data/res_file';
 export class NavLeftComponent {
   res_file: any[] = [];
   selectedFile: File | null = null;
+  constructor(private diaolog:MatDialog){
+
+  }
   ngOnInit() {
     this.res_file = res;
     console.log(this.res_file);
@@ -24,8 +28,11 @@ export class NavLeftComponent {
       
     }}
 
-    HandleLogin(){
-
+    HandleLogin(){ this.diaolog.open(AuthComponent,{
+   
+     
+    })
+    
     }
 
     isMenuOpen: boolean = false;
