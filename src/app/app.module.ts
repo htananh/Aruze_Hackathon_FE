@@ -18,6 +18,8 @@ import { RouterModule } from '@angular/router';
 import { DialogModule } from '@angular/cdk/dialog';
 import { AuthModule } from './auth/auth.module';
 import { MatDialogModule } from '@angular/material/dialog';
+import { StoreModule } from '@ngrx/store';
+import { AuthReducer } from './state/auth/auth.reducer';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatButtonModule,
     RouterModule,
     MatDialogModule,
+    StoreModule.forRoot({auth:AuthReducer}),
     
   ],
   providers: [],
